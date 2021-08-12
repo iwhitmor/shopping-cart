@@ -7,8 +7,12 @@ const Cart = function(items) {
 };
 
 Cart.prototype.addItem = function(product, quantity) {
-  // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-  console.log('we are now in the add item fuction and here are our arguments being passed through our paramaters in our function', product, quantity)
+  // console.log('we are now in the add item fuction and here are our arguments being passed through our paramaters in our function', product, quantity)
+
+   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  const newItem = new CartItem(product, quantity);
+  this.items.push(newItem);
+
 };
 
 Cart.prototype.saveToLocalStorage = function() {
